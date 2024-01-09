@@ -228,21 +228,21 @@ footer p {
 }
 
 .button2 {
-    font-size: 14px;
+    font-size: 16px;
     margin-right: 10px; 
     font-size: 14px;
     margin-top: .8rem;
     padding: 0.5rem 0.8rem; 
     outline: none;
-    background: #ffffff;
-    border: 1px solid #000000;
-    transition: all 0.4s ease;
+    background: rgb(159, 223, 255);
+    border: 2px solid #000000;
+    transition: all 0.6s ease;
     color: rgb(0, 0, 0);
 }
 
 .button2:hover{
-    border: 1px solid rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
     cursor: pointer;
-    background: rgb(0, 0, 0);
-    color: #ffffff;
+    background: rgb(28, 179, 255);
+    color: #000000;
 }
