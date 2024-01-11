@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>usePage</title>
+    <link rel="stylesheet" href="../styles/deleteArticle.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="userPage.html" class="logo">ARTICLES</a>
+            <nav>
+                <a href="#"><button class="button">@username</button></a>
+                <a href="index.html"><button class="button">end session</button></a>
+            </nav>
+        </div>
+    </header>
+    <br><br>
+   
+    <div class="button-container">
+        <div class="buttons">
+            <a href="deleteArticle.html"><button class="button2">DELETE ARTICLE</button></a>
+        </div>
+    </div>
+    
+    <br><br>
+    <div class="articles-container">
+        
+    <div class="eliminar">
+        <select name="article" id="article">
+            <option value="Selecciona un article" disabled selected>Select an article to delete</option>
+            <option value="article1">article1</option>
+        </select>
+    </div>
+    </div>
+    <section class="articles">
+        <article>
+            <div class="newArticle">
+                <label for="title">TITLE:</label><br>
+                <input type="text" id="title" name="title" value="Lorem ipsum" disabled><br><br>
+                <label for="content">CONTENT:</label><br>
+                <textarea id="content" name="content" rows="20" cols="120" value=""  disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit..."</textarea><br>
+                <label for="image">IMAGE:</label><br>
+                <img src="../assets/images/urkito.jpg" alt="urko">
+            </div>
+        </article>
+    </section>
+    <br>
+    <nav class="pagination">
+        <a href="deleteArticle.html"><button id="deleteButton" class="deleteButton">DELETE ARTICLE</button></a>
+
+    </nav>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <div class="footer-container">
+            <p>Made by David Buesa Lorente</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let selectElement = document.getElementById('article');
+        selectElement.addEventListener('change', function () {
+            let articlesSection = document.querySelector('.articles');
+            if (this.value === 'article1') {
+                articlesSection.style.display = 'block'; 
+                article.style.display = 'block';
+            } else {
+                articlesSection.style.display = 'none';
+                article.style.display = 'none';
+            }
+        });
+    });
+    deleteButton.addEventListener('click', function (e) {
+        e.preventDefault(); 
+        let confirmation = confirm("Are you sure you want to delete this article?");
+        if (confirmation) {
+            confirm("Article deleted.");
+            location.href = "userPage.html";
+            console.log("Article deleted.");
+        } else {
+            console.log("Deletion cancelled.");
+        }
+    });
+    
+</script>
+
+</body>
+
+</html>
