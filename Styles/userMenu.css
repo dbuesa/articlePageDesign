@@ -251,7 +251,7 @@ footer p {
 }
 
 .personal-info-container {
-    width:  50%;
+    width:  38%;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #000;
@@ -275,8 +275,26 @@ footer p {
     align-items: flex-start;
 }
 
+
+
+
 .editButton {
-    align-self: center;
+    align-self: right;
     margin-top: 20px;
+    font-size: .9rem;
+    margin-top: .8rem;
+    padding: 0.5rem 0.8rem; 
+    border-radius: 10rem;
+    outline: none;
+    background: #000000;
+    border: 1px solid #ffffff;
+    transition: all 0.4s ease;
+    color: rgb(255, 255, 255);
+}
+.editButton:hover{
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+    color: #000000;
 }
 
